@@ -1,0 +1,11 @@
+[master]
+master ansible_host=172.10.10.60
+
+[worker]
+worker ansible_host=172.10.10.61
+
+[all:vars]
+ansible_user=student
+ansible_become=true
+ansible_become_method=sudo
+ansible_python_interpreter=/usr/bin/python3
