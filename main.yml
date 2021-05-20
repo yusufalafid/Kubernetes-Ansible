@@ -1,0 +1,24 @@
+- name: Setup Nodes
+  hosts: master, worker
+  roles:
+    - setup-node
+
+- name: Install Dependency
+  hosts: master, worker
+  roles:
+    - install-depend
+
+- name: Bootstrap Master
+  hosts: master
+  roles:
+    - bootstrap-master
+
+- name: Add Worker Nodes
+  hosts: worker
+  roles:
+    - add-worker
+  
+- name: Install CNI
+  hosts: master
+  roles:
+    - cni
