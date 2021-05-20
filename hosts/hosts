@@ -1,8 +1,8 @@
 [master]
-master ansible_host=172.10.10.60
+master ansible_host=X.X.X.X
 
 [worker]
-worker ansible_host=172.10.10.61
+worker ansible_host=X.X.X.X
 
 [all:vars]
 ansible_user=student
