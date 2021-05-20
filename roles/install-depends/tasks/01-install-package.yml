@@ -11,10 +11,13 @@
   apt_key:
     url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
     state: present
+  become: true
 
 - name: Add apt GPG keys for Docker
   apt_key:
      url: https://download.docker.com/linux/ubuntu/gpg
+     state: present
+  become: true
 
 - name: Add Kubernetes repository
   apt_repository:
