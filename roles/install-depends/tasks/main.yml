@@ -1,2 +1,3 @@
 ---
 # tasks file for install-depends
+- include: 01-install-package.yml
