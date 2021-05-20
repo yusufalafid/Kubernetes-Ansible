@@ -6,7 +6,7 @@
 - name: Install Dependency
   hosts: master, worker
   roles:
-    - install-depend
+    - install-depends
 
 - name: Bootstrap Master
   hosts: master
