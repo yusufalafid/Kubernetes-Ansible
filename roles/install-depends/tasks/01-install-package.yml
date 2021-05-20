@@ -4,6 +4,7 @@
       - apt-transport-https
       - ca-certificates
       - curl
+      - software-properties-common
     update_cache: yes
 
 - name: Add Apt GPG keys for Kubernetes
