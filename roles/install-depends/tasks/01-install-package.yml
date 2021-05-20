@@ -14,10 +14,8 @@
   become: true
 
 - name: Add Apt GPG keys for Kubernetes
-  apt_key:
-    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
-    state: present
-  become: true
+  shell:
+    cmd: curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
 - name: Add Kubernetes repository
   apt_repository:
