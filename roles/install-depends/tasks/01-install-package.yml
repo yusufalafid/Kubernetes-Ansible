@@ -7,16 +7,16 @@
       - software-properties-common
     update_cache: yes
 
-- name: Add Apt GPG keys for Kubernetes
-  apt_key:
-    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
-    state: present
-  become: true
-
 - name: Add apt GPG keys for Docker
   apt_key:
      url: https://download.docker.com/linux/ubuntu/gpg
      state: present
+  become: true
+
+- name: Add Apt GPG keys for Kubernetes
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
   become: true
 
 - name: Add Kubernetes repository
