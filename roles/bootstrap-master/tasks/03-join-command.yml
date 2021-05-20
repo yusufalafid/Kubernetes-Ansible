@@ -1,0 +1,6 @@
+- name: Generate join command
+  command: sudo kubeadm token create --print-join-command
+  register: join_command
+
+- name: Copy join command
+  local_action: copy_content="{{ join_command.stdout_lines[0] }}" dest="../../add-worker/templates/join-command.sh.j2"

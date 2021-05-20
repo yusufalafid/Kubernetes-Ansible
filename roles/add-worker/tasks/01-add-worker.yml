@@ -1,0 +1,5 @@
+- name: Copy join command script
+  copy: src=join-command.sh.j2 dest=/tmp/join-command.sh mode=0777
+
+- name: Join worker node
+  command: sudo sh /tmp/join-command.sh

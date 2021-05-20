@@ -1,2 +1,3 @@
 ---
 # tasks file for cni
+- include: 01-calico.yml

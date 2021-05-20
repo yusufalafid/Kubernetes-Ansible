@@ -1,2 +1,3 @@
 ---
 # tasks file for add-worker
+- include: 01-add-worker.yml

@@ -1,4 +1,5 @@
 ---
 # tasks file for bootstrap-master
-- name: Bootstraping master
- 
+- include: 01-bootstrap-master.yml
+- include: 02-get-kubeadmin.yml
+- include: 03-join-command.yml
